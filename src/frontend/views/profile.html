@@ -1,0 +1,421 @@
+<!-- Profile View - Vista del perfil de usuario -->
+<div class="view-content">
+    <!-- Enhanced Profile Header -->
+    <section class="profile-hero">
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-banner">
+                    <div class="profile-main-info">
+                        <div class="profile-avatar-large">
+                            <div class="avatar-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <button class="avatar-edit-btn">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                            <div class="status-indicator online"></div>
+                        </div>
+                        <div class="profile-details">
+                            <h1 class="profile-name">Juan Pérez</h1>
+                            <p class="profile-title">Estudiante de Ingeniería en Sistemas</p>
+                            <p class="profile-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Campus Central, UTP
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Profile Quick Actions -->
+                <div class="profile-quick-actions">
+                    <button class="action-btn primary">
+                        <i class="fas fa-edit"></i>
+                        Editar Perfil
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Navigation Tabs -->
+    <section class="profile-navigation">
+        <div class="container">
+            <nav class="profile-tabs">
+                <button class="tab-btn active" data-tab="personal-info">
+                    <i class="fas fa-user" style="color: white;"></i>
+                    <span style="color: white;">Información Personal</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Profile Content -->
+    <section class="profile-content-section">
+        <div class="container">
+            <!-- Personal Information Tab -->
+            <div class="tab-content active" id="personal-info">
+                <div class="content-grid">
+                    <div class="main-content">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    <i class="fas fa-user-edit"></i>
+                                    Información Personal
+                                </h3>
+                                <p class="card-subtitle">Actualiza tu información para mejorar tu perfil</p>
+                            </div>
+                            <div class="card-body">
+                                <form class="profile-form">
+                                    <div class="form-section">
+                                        <h4 class="section-subtitle">Datos Básicos</h4>
+                                        <div class="form-grid">
+                                            <div class="form-group">
+                                                <label class="form-label">
+                                                    <i class="fas fa-user"></i>
+                                                    Nombre completo
+                                                </label>
+                                                <input type="text" class="form-input readonly" value="Juan Pérez" readonly>
+                                                <small class="form-help">Este campo no se puede modificar</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">
+                                                    <i class="fas fa-envelope"></i>
+                                                    Correo institucional
+                                                </label>
+                                                <input type="email" class="form-input readonly" value="juan.perez@utp.ac.pa" readonly>
+                                                <small class="form-help">Este campo no se puede modificar</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">
+                                                    <i class="fas fa-phone"></i>
+                                                    Teléfono
+                                                </label>
+                                                <input type="tel" class="form-input" placeholder="+507 6000-0000" value="+507 6234-5678">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-section">
+                                        <h4 class="section-subtitle">Información Académica</h4>
+                                        <div class="form-grid">
+                                            <div class="form-group">
+                                                <label class="form-label">
+                                                    <i class="fas fa-university"></i>
+                                                    Campus principal
+                                                </label>
+                                                <select class="form-select">
+                                                    <option value="campus-central" selected>Campus Central</option>
+                                                    <option value="campus-azuero">Campus Azuero</option>
+                                                    <option value="campus-chiriqui">Campus Chiriquí</option>
+                                                    <option value="campus-colon">Campus Colón</option>
+                                                    <option value="campus-veraguas">Campus Veraguas</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">
+                                                    <i class="fas fa-graduation-cap"></i>
+                                                    Carrera/Departamento
+                                                </label>
+                                                <input type="text" class="form-input" placeholder="Ej: Ingeniería en Sistemas" value="Ingeniería en Sistemas Computacionales">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">
+                                                    <i class="fas fa-calendar-alt"></i>
+                                                    Año de estudio
+                                                </label>
+                                                <select class="form-select">
+                                                    <option value="">Seleccionar año</option>
+                                                    <option value="1">Primer año</option>
+                                                    <option value="2">Segundo año</option>
+                                                    <option value="3" selected>Tercer año</option>
+                                                    <option value="4">Cuarto año</option>
+                                                    <option value="5">Quinto año</option>
+                                                    <option value="graduado">Graduado</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label">
+                                                    <i class="fas fa-id-card"></i>
+                                                    ID de estudiante
+                                                </label>
+                                                <input type="text" class="form-input readonly" value="8-123-456" readonly>
+                                                <small class="form-help">Este campo no se puede modificar</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-section">
+                                        <h4 class="section-subtitle">Información Adicional</h4>
+                                        <div class="form-group full-width">
+                                            <label class="form-label">
+                                                <i class="fas fa-user-circle"></i>
+                                                Biografía
+                                            </label>
+                                            <textarea class="form-textarea" placeholder="Cuéntanos sobre ti, tus intereses, especialidades..." rows="4">Estudiante de Ingeniería en Sistemas con pasión por la tecnología y el desarrollo de software. Me especializo en desarrollo web y móvil.</textarea>
+                                            <small class="form-help">Máximo 500 caracteres</small>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-times"></i>
+                                            Cancelar
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-save"></i>
+                                            Guardar cambios
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Content -->
+                    <div class="sidebar-content">
+                        <!-- Profile Statistics -->
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    <i class="fas fa-chart-bar"></i>
+                                    Estadísticas
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="stats-list">
+                                    <div class="stat-item-detailed">
+                                        <div class="stat-icon-wrapper">
+                                            <i class="fas fa-box"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <span class="stat-number">12</span>
+                                            <span class="stat-label">Productos Publicados</span>
+                                        </div>
+                                    </div>
+                                    <div class="stat-item-detailed">
+                                        <div class="stat-icon-wrapper">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <span class="stat-number">4.8</span>
+                                            <span class="stat-label">Rating Promedio</span>
+                                        </div>
+                                    </div>
+                                    <div class="stat-item-detailed">
+                                        <div class="stat-icon-wrapper">
+                                            <i class="fas fa-shopping-bag"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <span class="stat-number">28</span>
+                                            <span class="stat-label">Ventas Exitosas</span>
+                                        </div>
+                                    </div>
+                                    <div class="stat-item-detailed">
+                                        <div class="stat-icon-wrapper">
+                                            <i class="fas fa-calendar"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <span class="stat-number">2</span>
+                                            <span class="stat-label">Años Activo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity -->
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    <i class="fas fa-clock"></i>
+                                    Actividad Reciente
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="activity-list">
+                                    <div class="activity-item">
+                                        <div class="activity-icon success">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <p class="activity-text">Vendiste "iPhone 12 Pro"</p>
+                                            <span class="activity-time">Hace 2 horas</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon info">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <p class="activity-text">Publicaste "MacBook Air M1"</p>
+                                            <span class="activity-time">Hace 1 día</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <div class="activity-icon warning">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="activity-content">
+                                            <p class="activity-text">Recibiste una nueva reseña</p>
+                                            <span class="activity-time">Hace 3 días</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- System Feedback -->
+                        <div class="content-card">
+                            <div class="card-header">
+                                <h4 class="card-title">
+                                    <i class="fas fa-lightbulb"></i>
+                                    Feedback del Sistema
+                                </h4>
+                                <p class="card-subtitle">Ayúdanos a mejorar ZonaUTP</p>
+                            </div>
+                            <div class="card-body">
+                                <form class="feedback-form" id="systemFeedbackForm">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-tags"></i>
+                                            Tipo de feedback
+                                        </label>
+                                        <select class="form-select" id="feedbackType" required>
+                                            <option value="">Selecciona una opción</option>
+                                            <option value="suggestion">💡 Sugerencia</option>
+                                            <option value="bug">🐛 Reporte de error</option>
+                                            <option value="feature">✨ Solicitud de función</option>
+                                            <option value="improvement">🔧 Mejora</option>
+                                            <option value="other">💬 Otro</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-edit"></i>
+                                            Describe tu feedback
+                                        </label>
+                                        <textarea 
+                                            class="form-textarea" 
+                                            id="feedbackMessage"
+                                            placeholder="Cuéntanos qué piensas sobre ZonaUTP, qué podríamos mejorar, o reporta algún problema que hayas encontrado..."
+                                            rows="5"
+                                            maxlength="1000"
+                                            required>
+                                        </textarea>
+                                        <small class="form-help">
+                                            <span id="charCount">0</span>/1000 caracteres
+                                        </small>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-thermometer-half"></i>
+                                            Prioridad
+                                        </label>
+                                        <div class="priority-options">
+                                            <label class="priority-option">
+                                                <input type="radio" name="priority" value="low" checked>
+                                                <span class="priority-indicator low"></span>
+                                                <span>Baja</span>
+                                            </label>
+                                            <label class="priority-option">
+                                                <input type="radio" name="priority" value="medium">
+                                                <span class="priority-indicator medium"></span>
+                                                <span>Media</span>
+                                            </label>
+                                            <label class="priority-option">
+                                                <input type="radio" name="priority" value="high">
+                                                <span class="priority-indicator high"></span>
+                                                <span>Alta</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" id="allowContact">
+                                            <span class="checkmark"></span>
+                                            Permitir que el equipo de desarrollo me contacte para aclaraciones
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="feedback-actions">
+                                        <button type="button" class="btn btn-outline btn-sm" id="clearFeedback">
+                                            <i class="fas fa-eraser"></i>
+                                            Limpiar
+                                        </button>
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <i class="fas fa-paper-plane"></i>
+                                            Enviar Feedback
+                                        </button>
+                                    </div>
+                                </form>
+                                
+                                <!-- Feedback Success Message -->
+                                <div class="feedback-success" id="feedbackSuccess" style="display: none;">
+                                    <div class="success-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <h4>¡Gracias por tu feedback!</h4>
+                                    <p>Tu mensaje ha sido enviado al equipo de desarrollo. Te contactaremos si necesitamos más información.</p>
+                                    <button type="button" class="btn btn-outline btn-sm" id="sendAnother">
+                                        <i class="fas fa-plus"></i>
+                                        Enviar otro feedback
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Tab (placeholder for now) -->
+            <div class="tab-content" id="activity">
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-chart-line"></i>
+                            Tu Actividad
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Contenido de actividad en desarrollo...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Tab (placeholder for now) -->
+            <div class="tab-content" id="products">
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-box"></i>
+                            Mis Productos
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Gestión de productos en desarrollo...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Tab (placeholder for now) -->
+            <div class="tab-content" id="reviews">
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <i class="fas fa-star"></i>
+                            Reseñas y Contactos
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Sistema de reseñas y historial de contactos en desarrollo...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZonaUTP - Marketplace Universitario UTP</title>
+    <meta name="description" content="ZonaUTP - Marketplace digital exclusivo para la comunidad UTP. Compra, vende e intercambia productos y servicios de forma segura.">
+    <link rel="icon" type="image/x-icon" href="src/frontend/images/PNGs/Logo.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/frontend/css/marketplace.css">
+    <link rel="stylesheet" href="src/frontend/css/components.css">
+    <link rel="stylesheet" href="src/frontend/css/spa-layout.css">
+    <link rel="stylesheet" href="src/frontend/css/messages-modal.css">
+    <link rel="stylesheet" href="src/frontend/css/mobile-menu.css">
+    <link rel="stylesheet" href="src/frontend/css/messages-view.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="app" class="app-container">
+        <!-- Header Component -->
+        <div id="header-container"></div>
+        
+        <!-- Main Content Container - Ocupa todo el espacio disponible -->
+        <div id="main-container" class="main-container">
+            <!-- Aquí se cargarán las vistas dinámicamente -->
+        </div>
+        
+        <!-- Footer Component -->
+        <div id="footer-container"></div>
+        
+        <!-- Quick Actions Component -->
+        <div id="quick-actions-container"></div>
+        
+        <!-- Messages Modal System - Disponible globalmente -->
+        <div class="header-messages-modal" id="headerMessagesModal">
+            <div class="modal-header">
+                <h3>Chats</h3>
+                <div class="modal-actions">
+                    <button class="btn-icon" title="Buscar en Messenger">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="btn-icon" title="Pantalla completa">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                    <button class="btn-icon" title="Escribir">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-close" id="closeHeaderMessagesModal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar en Messenger" class="search-input">
+                </div>
+            </div>
+            
+            <div class="modal-tabs">
+                <button class="tab active">Todos</button>
+                <button class="tab">No leídos</button>
+                <button class="tab">Grupos</button>
+                <button class="tab-more">
+                    <i class="fas fa-ellipsis-h"></i>
+                </button>
+            </div>
+            
+            <div class="chat-notice">
+                <span>No pierdas tu historial de chat. <a href="#" class="link">Crear PIN</a></span>
+            </div>
+            
+            <div class="messages-list">
+                <div class="message-item unread" data-user="valencia">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="message-info">
+                        <div class="user-name">Nueva solicitud de mensaje</div>
+                        <div class="last-message">De Valencia Alen</div>
+                    </div>
+                    <div class="message-meta">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                
+                <div class="message-item" data-user="marketplace">
+                    <div class="avatar marketplace-avatar">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="message-info">
+                        <div class="user-name">Marketplace</div>
+                        <div class="last-message">2 mensajes nuevos • 1 h</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <a href="#" class="footer-link">Ver todo en Messenger</a>
+            </div>
+        </div>
+
+        <!-- Modal de chat individual -->
+        <div class="individual-chat-modal" id="individualChatModal">
+            <div class="chat-header">
+                <button class="btn-back" id="backToMessagesList">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <div class="chat-user-info">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <div class="user-name" id="currentChatUser">Juan Pérez</div>
+                        <div class="user-status">Activo hace 5 min</div>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <button class="btn-icon" title="Llamar">
+                        <i class="fas fa-phone"></i>
+                    </button>
+                    <button class="btn-icon" title="Video llamada">
+                        <i class="fas fa-video"></i>
+                    </button>
+                    <button class="btn-icon" title="Información">
+                        <i class="fas fa-info-circle"></i>
+                    </button>
+                    <button class="btn-close" id="closeIndividualChat">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="chat-messages-container">
+                <div class="chat-messages-area">
+                    <div class="message-bubble received">
+                        <div class="bubble-content">
+                            Hola! ¿Sigues vendiendo la laptop HP que publicaste?
+                        </div>
+                        <div class="message-time">Hace 2 h</div>
+                    </div>
+                    
+                    <div class="message-bubble sent">
+                        <div class="bubble-content">
+                            ¡Hola! Sí, aún está disponible. ¿Te interesa verla?
+                        </div>
+                        <div class="message-time">Hace 1 h</div>
+                    </div>
+                    
+                    <div class="message-bubble received">
+                        <div class="bubble-content">
+                            Perfecto! ¿Cuándo podemos encontrarnos en el campus?
+                        </div>
+                        <div class="message-time">Hace 30 min</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <div class="input-wrapper">
+                    <button class="btn-icon">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button class="btn-icon">
+                        <i class="fas fa-image"></i>
+                    </button>
+                    <button class="btn-icon">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <button class="btn-icon">
+                        <i class="fas fa-smile"></i>
+                    </button>
+                    <input type="text" placeholder="Escribe un mensaje..." class="message-input">
+                    <button class="btn-send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay para modales -->
+        <div class="messages-overlay" id="messagesOverlay"></div>
+    </div>
+
+    <script src="src/frontend/js/marketplace.js" defer></script>
+    <script src="src/frontend/js/spa-router.js" defer></script>
+    <script src="src/frontend/js/messages-view.js" defer></script>
+</body>
+</html>

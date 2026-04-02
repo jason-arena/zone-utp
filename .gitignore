@@ -1,0 +1,43 @@
+# Archivos de configuración sensibles
+src/backend/config/database.php
+src/backend/config/credentials.php
+
+# Archivos de uploads (excepto estructura)
+uploads/products/*
+uploads/profiles/*
+!uploads/products/.gitkeep
+!uploads/profiles/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Cache
+cache/
+
+# Dependencias (si se usan en el futuro)
+node_modules/
+vendor/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de respaldo
+*.bak
+*.backup
+
+# Variables de entorno
+.env
+.env.local
+.env.production

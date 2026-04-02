@@ -1,0 +1,93 @@
+<!-- Header Navigation Component -->
+<header class="header" id="header">
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-brand">
+                <img src="src/frontend/images/PNGs/logo.png" alt="ZonaUTP" class="nav-logo">
+                <span class="brand-text"></span>
+            </div>
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="¿Qué estás buscando?" class="search-input" id="searchInput">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="nav-menu" id="navMenu">
+                <!-- Mobile Search -->
+                <div class="mobile-search">
+                    <div class="search-bar">
+                        <input type="text" placeholder="¿Qué estás buscando?" class="search-input" id="mobileSearchInput">
+                        <button class="search-btn" id="mobileSearchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <a href="#home" class="nav-link" data-route="home">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+                <a href="#favorites" class="nav-link" data-route="favorites">
+                    <i class="fas fa-heart"></i>
+                    <span>Favoritos</span>
+                    <span class="badge">3</span>
+                </a>
+                <a href="#sell" class="nav-link" data-route="sell">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Vender</span>
+                </a>
+                <button class="nav-link messages-btn" id="messagesBtn">
+                    <i class="fas fa-comments"></i>
+                    <span>Mensajes</span>
+                    <span class="badge">2</span>
+                </button>
+                <div class="nav-divider"></div>
+                <div class="user-menu">
+                    <button class="user-btn" id="userBtn">
+                        <div class="user-avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <span class="user-name">Juan Pérez</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="#profile" class="dropdown-item" data-route="profile">
+                            <i class="fas fa-user"></i>
+                            Mi Perfil
+                        </a>
+                        <a href="#my-products" class="dropdown-item" data-route="my-products">
+                            <i class="fas fa-box"></i>
+                            Mis Productos
+                        </a>
+                        <a href="#my-purchases" class="dropdown-item" data-route="my-purchases">
+                            <i class="fas fa-shopping-bag"></i>
+                            Mis Compras
+                        </a>
+                        <a href="#settings" class="dropdown-item" data-route="settings">
+                            <i class="fas fa-cog"></i>
+                            Configuración
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="src/frontend/html/login.html" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Cerrar Sesión
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</header>

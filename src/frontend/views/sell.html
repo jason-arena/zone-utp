@@ -1,0 +1,331 @@
+<!-- Sell View - Vista para vender productos -->
+<div class="view-content">
+  <!-- Enhanced Page Header -->
+  <section class="page-header gradient-header">
+    <div class="container">
+      <div class="page-header-content">
+        <div class="page-title-section">
+          <div class="title-icon">
+            <i class="fas fa-plus-circle"></i>
+          </div>
+          <div class="title-content">
+            <h1 class="page-title">Vender Producto</h1>
+            <p class="page-subtitle">
+              Publica tu producto en el marketplace UTP y llega a miles de
+              estudiantes
+            </p>
+          </div>
+        </div>
+
+        <!-- Quick Tips -->
+        <div class="sell-tips">
+          <div class="tip-card">
+            <i class="fas fa-camera"></i>
+            <span>Fotos de calidad</span>
+          </div>
+          <div class="tip-card">
+            <i class="fas fa-tag"></i>
+            <span>Precio competitivo</span>
+          </div>
+          <div class="tip-card">
+            <i class="fas fa-edit"></i>
+            <span>Descripción detallada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="sell-section">
+    <div class="container">
+      <div class="sell-form-container">
+        <form class="sell-form" id="sellForm">
+          <div class="form-grid">
+            <!-- Product Information Section -->
+            <div class="form-section">
+              <div class="section-header">
+                <h3 class="section-title">
+                  <i class="fas fa-info-circle"></i>
+                  Información del producto
+                </h3>
+                <p class="section-description">
+                  Completa los datos básicos de tu producto
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required">
+                  <i class="fas fa-tag"></i>
+                  Título del producto
+                </label>
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="Ej: iPhone 13 Pro Max 128GB Color Azul"
+                  maxlength="100"
+                />
+                <div class="input-helper">
+                  <span class="char-counter">0/100</span>
+                  <span class="input-tip"
+                    >Sé específico con marca, modelo y características</span
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required">
+                  <i class="fas fa-folder"></i>
+                  Categoría
+                </label>
+                <select class="form-select">
+                  <option value="">Seleccionar categoría</option>
+                  <optgroup label="📚 Académico">
+                    <option value="books">Libros y Textos</option>
+                    <option value="materials">Material de Estudio</option>
+                    <option value="supplies">Útiles Escolares</option>
+                  </optgroup>
+                  <optgroup label="💻 Tecnología">
+                    <option value="laptops">Laptops</option>
+                    <option value="phones">Teléfonos</option>
+                    <option value="accessories">Accesorios Tech</option>
+                    <option value="gaming">Gaming</option>
+                  </optgroup>
+                  <optgroup label="🏠 Vida Estudiantil">
+                    <option value="furniture">Muebles</option>
+                    <option value="clothing">Ropa</option>
+                    <option value="sports">Deportes</option>
+                    <option value="services">Servicios</option>
+                  </optgroup>
+                  <optgroup label="🎯 Otros">
+                    <option value="others">Otros</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required">
+                  <i class="fas fa-dollar-sign"></i>
+                  Precio
+                </label>
+                <div class="price-input-container">
+                  <span class="currency-symbol">$</span>
+                  <input
+                    type="number"
+                    class="form-input price-input"
+                    placeholder="0.00"
+                    min="0"
+                    step="0.01"
+                  />
+                  <div class="price-suggestions">
+                    <button
+                      type="button"
+                      class="price-btn"
+                      data-action="market-price"
+                    >
+                      <i class="fas fa-chart-line"></i>
+                      Precio de mercado
+                    </button>
+                  </div>
+                </div>
+                <div class="input-helper">
+                  <span class="input-tip"
+                    >💡 Tip: Productos bien valorados se venden más rápido</span
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required">
+                  <i class="fas fa-align-left"></i>
+                  Descripción
+                </label>
+                <textarea
+                  class="form-textarea"
+                  placeholder="Describe tu producto en detalle...
+
+• Estado actual del producto
+• Razón de venta
+• Accesorios incluidos
+• Cualquier detalle importante"
+                  rows="8"
+                  maxlength="1000"
+                ></textarea>
+                <div class="input-helper">
+                  <span class="char-counter">0/1000</span>
+                  <span class="input-tip"
+                    >Incluye todos los detalles importantes</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Images and Details Section -->
+            <div class="form-section">
+              <div class="section-header">
+                <h3 class="section-title">
+                  <i class="fas fa-images"></i>
+                  Imágenes y detalles
+                </h3>
+                <p class="section-description">
+                  Agrega fotos de calidad y información adicional
+                </p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">
+                  <i class="fas fa-camera"></i>
+                  Imágenes del producto
+                  <span class="optional-label">Opcional pero recomendado</span>
+                </label>
+                <div class="file-upload-area">
+                  <input
+                    type="file"
+                    multiple
+                    accept="image/*"
+                    id="productImages"
+                    class="file-input"
+                  />
+                  <div class="upload-content">
+                    <div class="upload-icon">
+                      <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="upload-text">
+                      <h4>Arrastra imágenes aquí</h4>
+                      <p>
+                        o
+                        <button type="button" class="upload-link">
+                          haz clic para seleccionar
+                        </button>
+                      </p>
+                    </div>
+                    <div class="upload-specs">
+                      <span class="spec">📸 Máximo 5 imágenes</span>
+                      <span class="spec">📁 5MB por imagen</span>
+                      <span class="spec">🖼️ JPG, PNG, WebP</span>
+                    </div>
+                  </div>
+                  <!-- Preview area for uploaded images -->
+                  <div
+                    class="image-preview-grid"
+                    id="imagePreviewGrid"
+                    style="display: none"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Campus/Ubicación
+                </label>
+                <select class="form-select">
+                  <option value="">Seleccionar ubicación</option>
+                  <option value="campus-central">
+                    🏛️ Campus Central - Ciudad de Panamá
+                  </option>
+                  <option value="campus-azuero">
+                    🌾 Campus Azuero - Los Santos
+                  </option>
+                  <option value="campus-chiriqui">
+                    🏔️ Campus Chiriquí - David
+                  </option>
+                  <option value="campus-colon">🚢 Campus Colón - Colón</option>
+                  <option value="campus-veraguas">
+                    🌿 Campus Veraguas - Santiago
+                  </option>
+                  <option value="extension-cocle">📍 Extensión Coclé</option>
+                  <option value="online">💻 Entrega virtual/online</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">
+                  <i class="fas fa-star"></i>
+                  Estado del producto
+                </label>
+                <div class="condition-grid">
+                  <label class="condition-card">
+                    <input type="radio" name="condition" value="new" />
+                    <div class="condition-content">
+                      <i class="fas fa-gem"></i>
+                      <span class="condition-title">Nuevo</span>
+                      <span class="condition-desc">Sin usar, con empaque</span>
+                    </div>
+                  </label>
+                  <label class="condition-card">
+                    <input type="radio" name="condition" value="like-new" />
+                    <div class="condition-content">
+                      <i class="fas fa-star"></i>
+                      <span class="condition-title">Como nuevo</span>
+                      <span class="condition-desc">Usado muy poco</span>
+                    </div>
+                  </label>
+                  <label class="condition-card">
+                    <input type="radio" name="condition" value="good" />
+                    <div class="condition-content">
+                      <i class="fas fa-thumbs-up"></i>
+                      <span class="condition-title">Buen estado</span>
+                      <span class="condition-desc">Funciona perfectamente</span>
+                    </div>
+                  </label>
+                  <label class="condition-card">
+                    <input type="radio" name="condition" value="fair" />
+                    <div class="condition-content">
+                      <i class="fas fa-tools"></i>
+                      <span class="condition-title">Estado regular</span>
+                      <span class="condition-desc"
+                        >Algunos detalles visibles</span
+                      >
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Additional Options -->
+              <div class="form-group">
+                <label class="form-label">
+                  <i class="fas fa-sliders-h"></i>
+                  Opciones adicionales
+                </label>
+                <div class="checkbox-group">
+                  <label class="form-checkbox">
+                    <input type="checkbox" name="negotiable" />
+                    <span class="checkbox-mark"></span>
+                    <span class="checkbox-label">Precio negociable</span>
+                  </label>
+                  <label class="form-checkbox">
+                    <input type="checkbox" name="urgent" />
+                    <span class="checkbox-mark"></span>
+                    <span class="checkbox-label">Venta urgente</span>
+                  </label>
+                  <label class="form-checkbox">
+                    <input type="checkbox" name="delivery" />
+                    <span class="checkbox-mark"></span>
+                    <span class="checkbox-label"
+                      >Ofrezco entrega a domicilio</span
+                    >
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enhanced Form Actions -->
+          <div class="form-actions">
+            <div class="action-right">
+              <button type="button" class="btn btn-secondary" id="cancelForm">
+                <i class="fas fa-times"></i>
+                Cancelar
+              </button>
+              <button type="submit" class="btn btn-primary" id="publishProduct">
+                <i class="fas fa-rocket"></i>
+                Publicar producto
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>

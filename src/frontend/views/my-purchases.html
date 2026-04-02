@@ -1,0 +1,103 @@
+<!-- My Purchases View - Vista de compras del usuario -->
+<div class="view-content">
+    <!-- Enhanced Page Header -->
+    <section class="page-header gradient-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-title-section">
+                    <div class="title-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="title-content">
+                        <h1 class="page-title">Mis Compras</h1>
+                        <p class="page-subtitle">Historial de productos que has adquirido</p>
+                        <div class="purchases-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-receipt"></i>
+                                <span>7 compras realizadas</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Toolbar -->
+                <div class="page-toolbar">
+                    <div class="toolbar-right">
+                        <button class="btn btn-primary" data-route="home">
+                            <i class="fas fa-search"></i>
+                            Explorar productos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Purchases Section -->
+    <section class="my-purchases-section">
+        <div class="container">
+            <!-- Purchases Filter Tabs -->
+            <div class="my-purchases-filters">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-status="all">
+                        Todas <span class="tab-count">7</span>
+                    </button>
+                    <button class="filter-tab" data-status="pending">
+                        Pendientes <span class="tab-count">2</span>
+                    </button>
+                    <button class="filter-tab" data-status="completed">
+                        Completadas <span class="tab-count">5</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- My Purchases Content -->
+            <div class="my-purchases-content">
+                <!-- Purchases List -->
+                <div class="my-purchases-list" id="myPurchasesList">
+                    <!-- Lista de compras se cargará dinámicamente aquí -->
+                </div>
+
+                <!-- Enhanced Empty State -->
+                <div class="empty-my-purchases" id="emptyMyPurchases">
+                    <div class="empty-illustration">
+                        <div class="empty-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="empty-content">
+                        <h3 class="empty-title">¡No has realizado compras aún!</h3>
+                        <p class="empty-description">
+                            Explora el marketplace de ZonaUTP y encuentra productos increíbles 
+                            de otros estudiantes y miembros de la comunidad universitaria.
+                        </p>
+                        <div class="empty-tips">
+                            <div class="tip-item">
+                                <i class="fas fa-search"></i>
+                                <span>Busca por categorías</span>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-filter"></i>
+                                <span>Filtra por precio</span>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Guarda tus favoritos</span>
+                            </div>
+                        </div>
+                        <div class="empty-actions">
+                            <button class="btn btn-primary btn-lg" data-route="home">
+                                <i class="fas fa-search"></i>
+                                Explorar productos
+                            </button>
+                            <button class="btn btn-outline btn-lg" data-route="favorites">
+                                <i class="fas fa-heart"></i>
+                                Ver favoritos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

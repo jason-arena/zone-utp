@@ -1,0 +1,2 @@
+# Favicon placeholder
+# Para agregar un favicon real, reemplaza este archivo con favicon.ico

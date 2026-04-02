@@ -1,0 +1,139 @@
+<!-- Home View - Página principal del marketplace -->
+<div class="view-content">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Marketplace exclusivo para la <span class="highlight">comunidad UTP</span>
+            </h1>
+            <p class="hero-subtitle">
+                Compra, vende e intercambia productos y servicios con estudiantes y personal de la Universidad Tecnológica de Panamá
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">2,847</span>
+                    <span class="stat-label">Productos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1,250</span>
+                    <span class="stat-label">Usuarios activos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Satisfacción</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <!-- Categories Filter -->
+                <div class="filter-group">
+                    <label class="filter-label">Categorías</label>
+                    <div class="category-tabs" id="categoryTabs">
+                        <button class="category-tab active" data-category="all">
+                            <i class="fas fa-th-large"></i>
+                            Todas
+                        </button>
+                        <button class="category-tab" data-category="books">
+                            <i class="fas fa-book"></i>
+                            Libros
+                        </button>
+                        <button class="category-tab" data-category="electronics">
+                            <i class="fas fa-laptop"></i>
+                            Electrónicos
+                        </button>
+                        <button class="category-tab" data-category="furniture">
+                            <i class="fas fa-chair"></i>
+                            Muebles
+                        </button>
+                        <button class="category-tab" data-category="services">
+                            <i class="fas fa-handshake"></i>
+                            Servicios
+                        </button>
+                        <button class="category-tab" data-category="clothing">
+                            <i class="fas fa-tshirt"></i>
+                            Ropa
+                        </button>
+                        <button class="category-tab" data-category="sports">
+                            <i class="fas fa-football-ball"></i>
+                            Deportes
+                        </button>
+                        <button class="category-tab" data-category="others">
+                            <i class="fas fa-ellipsis-h"></i>
+                            Otros
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Additional Filters -->
+                <div class="filter-actions">
+                    <div class="filter-group">
+                        <select class="filter-select" id="priceFilter">
+                            <option value="">Precio</option>
+                            <option value="0-25">$0 - $25</option>
+                            <option value="25-50">$25 - $50</option>
+                            <option value="50-100">$50 - $100</option>
+                            <option value="100-200">$100 - $200</option>
+                            <option value="200+">$200+</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select class="filter-select" id="locationFilter">
+                            <option value="">Ubicación</option>
+                            <option value="campus-central">Campus Central</option>
+                            <option value="campus-azuero">Campus Azuero</option>
+                            <option value="campus-chiriqui">Campus Chiriquí</option>
+                            <option value="campus-colon">Campus Colón</option>
+                            <option value="campus-veraguas">Campus Veraguas</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select class="filter-select" id="sortFilter">
+                            <option value="recent">Más recientes</option>
+                            <option value="price-low">Precio: menor a mayor</option>
+                            <option value="price-high">Precio: mayor a menor</option>
+                            <option value="popular">Más populares</option>
+                        </select>
+                    </div>
+                    <button class="filter-reset" id="filterReset">
+                        <i class="fas fa-undo"></i>
+                        Limpiar filtros
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Productos destacados</h2>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid" id="gridView">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list" id="listView">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se cargan dinámicamente desde marketplace.js -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="load-more-btn" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i>
+                    Cargar más productos
+                </button>
+            </div>
+        </div>
+    </section>
+</div>

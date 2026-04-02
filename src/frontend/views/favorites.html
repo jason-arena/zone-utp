@@ -1,0 +1,157 @@
+<!-- Favorites View - Vista de productos favoritos -->
+<div class="view-content">
+    <!-- Enhanced Page Header -->
+    <section class="page-header gradient-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-title-section">
+                    <div class="title-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="title-content">
+                        <h1 class="page-title">Mis Favoritos</h1>
+                        <p class="page-subtitle">Productos que has marcado como favoritos</p>
+                        <div class="favorites-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-heart"></i>
+                                <span id="favoriteCount">0 productos</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Toolbar -->
+                <div class="page-toolbar">
+                    <div class="toolbar-left">
+                        <div class="view-controls">
+                            <button class="view-btn active" data-view="grid" title="Vista en cuadrícula">
+                                <i class="fas fa-th"></i>
+                            </button>
+                            <button class="view-btn" data-view="list" title="Vista en lista">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="toolbar-right">
+                        <select class="sort-select">
+                            <option value="recent">Agregados recientemente</option>
+                            <option value="price-low">Precio: menor a mayor</option>
+                            <option value="price-high">Precio: mayor a menor</option>
+                            <option value="alphabetical">Orden alfabético</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="favorites-section">
+        <div class="container">
+            <!-- Favorites Content -->
+            <div class="favorites-content">
+                <!-- Loading State -->
+                <div class="loading-state" id="favoritesLoading" style="display: none;">
+                    <div class="loading-spinner">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                    <p>Cargando tus favoritos...</p>
+                </div>
+
+                <!-- Favorites Grid -->
+                <div class="favorites-grid" id="favoritesGrid">
+                    <!-- Los productos favoritos se cargarán dinámicamente aquí -->
+                </div>
+
+                <!-- Enhanced Empty State -->
+                <div class="empty-favorites" id="emptyFavorites">
+                    <div class="empty-illustration">
+                        <div class="empty-icon">
+                            <i class="fas fa-heart"></i>
+                            <div class="heart-pulse"></div>
+                        </div>
+                    </div>
+                    <div class="empty-content">
+                        <h3 class="empty-title">¡Aún no tienes favoritos!</h3>
+                        <p class="empty-description">
+                            Cuando encuentres productos que te gusten, márcalos como favoritos 
+                            para tenerlos siempre a mano.
+                        </p>
+                        <div class="empty-tips">
+                            <div class="tip-item">
+                                <i class="fas fa-search"></i>
+                                <span>Explora productos increíbles</span>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Marca los que te gusten</span>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-star"></i>
+                                <span>Accede fácilmente después</span>
+                            </div>
+                        </div>
+                        <div class="empty-actions">
+                            <a href="#home" class="btn btn-primary btn-lg" data-route="home">
+                                <i class="fas fa-shopping-bag"></i>
+                                Explorar productos
+                            </a>
+                            <a href="#sell" class="btn btn-outline btn-lg" data-route="sell">
+                                <i class="fas fa-plus"></i>
+                                Publicar producto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Favorites with Products -->
+                <div class="favorites-with-products" id="favoritesWithProducts" style="display: none;">
+                    <!-- Filter Bar -->
+                    <div class="favorites-filters">
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-filter="all">
+                                Todos <span class="tab-count">0</span>
+                            </button>
+                            <button class="filter-tab" data-filter="available">
+                                Disponibles <span class="tab-count">0</span>
+                            </button>
+                            <button class="filter-tab" data-filter="price-drop">
+                                Bajó de precio <span class="tab-count">0</span>
+                            </button>
+                        </div>
+                        <div class="filter-actions">
+                            <button class="btn btn-outline btn-sm" id="clearAllFavorites">
+                                <i class="fas fa-trash"></i>
+                                Limpiar todos
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid grid-view" id="favoritesProductsGrid">
+                        <!-- Productos favoritos se renderizarán aquí -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="favorites-pagination" id="favoritesPagination" style="display: none;">
+                        <div class="pagination-info">
+                            <span>Mostrando <strong>1-12</strong> de <strong>24</strong> favoritos</span>
+                        </div>
+                        <div class="pagination-controls">
+                            <button class="pagination-btn" disabled>
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <span class="page-numbers">
+                                <button class="page-btn active">1</button>
+                                <button class="page-btn">2</button>
+                            </span>
+                            <button class="pagination-btn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

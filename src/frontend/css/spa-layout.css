@@ -1,0 +1,125 @@
+/* SPA Layout - Garantiza que cada vista ocupe todo el viewport */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-container {
+    flex: 1;
+    width: 100%;
+    min-height: calc(100vh - var(--header-height, 80px));
+    position: relative;
+}
+
+/* Vista activa ocupa todo el espacio */
+.view {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.view.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+/* Asegurar que el contenido ocupe todo el espacio */
+.view-content {
+    width: 100%;
+    min-height: 100%;
+}
+
+/* Vista de mensajes sin espacios extra */
+.view[data-view="messages"] .view-content,
+.view.active .view-content {
+    margin: 0;
+    padding: 0;
+}
+
+/* Eliminar espacios específicos en la vista de mensajes */
+.view[data-view="messages"] .view-content {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.view[data-view="messages"] .messages-section {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Header fijo */
+#header-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Footer */
+#footer-container {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Quick Actions */
+#quick-actions-container {
+    position: fixed;
+    bottom: var(--space-6);
+    right: var(--space-6);
+    z-index: 100;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-container {
+        min-height: calc(100vh - 70px);
+    }
+    
+    #quick-actions-container {
+        bottom: var(--space-4);
+        right: var(--space-4);
+    }
+}
+
+/* Loading state */
+.view.loading {
+    opacity: 0.6;
+}
+
+.view.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 3px solid var(--gray-200);
+    border-top: 3px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

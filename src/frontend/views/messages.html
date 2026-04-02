@@ -1,0 +1,159 @@
+<!-- Messages Modal System - Se activa desde header -->
+<div class="view-content">
+    <!-- Modal de lista de mensajes (se abre desde header) -->
+    <div class="header-messages-modal" id="headerMessagesModal">
+        <div class="modal-header">
+            <h3>Chats</h3>
+            <div class="modal-actions">
+                <button class="btn-icon" title="Buscar en Messenger">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="btn-icon" title="Pantalla completa">
+                    <i class="fas fa-expand"></i>
+                </button>
+                <button class="btn-icon" title="Escribir">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn-close" id="closeHeaderMessagesModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar en Messenger" class="search-input">
+            </div>
+        </div>
+        
+        <div class="modal-tabs">
+            <button class="tab active">Todos</button>
+            <button class="tab">No leídos</button>
+            <button class="tab-more">
+                <i class="fas fa-ellipsis-h"></i>
+            </button>
+        </div>
+        
+        <div class="chat-notice">
+            <span>No pierdas tu historial de chat. <a href="#" class="link">Crear PIN</a></span>
+        </div>
+        
+        <div class="messages-list">
+            <div class="message-item unread" data-user="valencia">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="message-info">
+                    <div class="user-name">Nueva solicitud de mensaje</div>
+                    <div class="last-message">De Valencia Alen</div>
+                </div>
+                <div class="message-meta">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            
+            <div class="message-item" data-user="marketplace">
+                <div class="avatar marketplace-avatar">
+                    <i class="fas fa-store"></i>
+                </div>
+                <div class="message-info">
+                    <div class="user-name">Marketplace</div>
+                    <div class="last-message">2 mensajes nuevos • 1 h</div>
+                </div>
+            </div>
+            
+            <div class="message-item" data-user="Jason">
+                <div class="avatar">
+                    <img src="https://via.placeholder.com/40" alt="Jason" class="avatar-img">
+                </div>
+                <div class="message-info">
+                    <div class="user-name">Jason arena</div>
+                    <div class="last-message">Los mensajes y las llamadas están... • 1 año</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-footer">
+            <a href="#" class="footer-link">Ver todo en Messenger</a>
+        </div>
+    </div>
+
+    <!-- Modal de chat individual -->
+    <div class="individual-chat-modal" id="individualChatModal">
+        <div class="chat-header">
+            <button class="btn-back" id="backToMessagesList">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="chat-user-info">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-details">
+                    <div class="user-name" id="currentChatUser">Jason arena</div>
+                    <div class="user-status">Activo hace 4 min</div>
+                </div>
+            </div>
+            <div class="chat-actions">
+                <button class="btn-icon" title="Llamar">
+                    <i class="fas fa-phone"></i>
+                </button>
+                <button class="btn-icon" title="Video llamada">
+                    <i class="fas fa-video"></i>
+                </button>
+                <button class="btn-icon" title="Información">
+                    <i class="fas fa-info-circle"></i>
+                </button>
+                <button class="btn-close" id="closeIndividualChat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="chat-messages-container">
+            <div class="chat-messages-area">
+                <div class="message-bubble received">
+                    <div class="bubble-content">
+                        No pierdas tus chats<br>
+                        Crea un PIN para acceder al historial de chat en cualquier dispositivo.
+                    </div>
+                    <div class="message-actions">
+                        <button class="btn-primary btn-sm">Crear PIN</button>
+                    </div>
+                    <div class="message-time">Ahora</div>
+                </div>
+                
+                <div class="message-bubble sent">
+                    <div class="bubble-content">
+                        ¿Qué juego tienes bro? Y sobre todo lo demás funciona bien? Para estar seguro.
+                    </div>
+                    <div class="message-time">Hace 2 h</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <div class="input-wrapper">
+                <button class="btn-icon">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="btn-icon">
+                    <i class="fas fa-image"></i>
+                </button>
+                <button class="btn-icon">
+                    <i class="fas fa-paperclip"></i>
+                </button>
+                <button class="btn-icon">
+                    <i class="fas fa-smile"></i>
+                </button>
+                <input type="text" placeholder="Escribe un mensaje..." class="message-input">
+                <button class="btn-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay para modales -->
+    <div class="messages-overlay" id="messagesOverlay"></div>
+</div>
